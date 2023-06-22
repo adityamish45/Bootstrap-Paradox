@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { axiosClient } from "../../utils/axiosClient";
 import "./Signup.scss";
-
+import Nav from ".//../../components/nav/Nav";
 function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,6 +23,8 @@ function Signup() {
   }
 
   return (
+    <>
+      <Nav/>
     <div className="Signup">
       <div className="signup-box">
         <h2 className="heading">Signup</h2>
@@ -57,7 +59,8 @@ function Signup() {
           Already have an account? <Link to="/login">Log In</Link>
         </p>
       </div>
-    </div>
+      </div>
+      </>
   );
 }
 
