@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
+import Nav from ".//../../components/nav/Nav";
 import {axiosClient} from "../../utils/axiosClient";
 import { KEY_ACCESS_TOKEN, setItem } from "../../utils/localStorageManager";
-
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -27,7 +27,10 @@ function Login() {
     }
 
     return (
-        <div className="Login">
+        <>
+            <Nav/>
+            <div className="Login">
+                
             <div className="login-box">
                 <h2 className="heading">Login</h2>
                 <form onSubmit={handleSubmit}>
@@ -53,8 +56,10 @@ function Login() {
                     Do not have an account? <Link to="/signup">Sign Up</Link>
                 </p>
             </div>
-        </div>
+            </div>
+            </>
     );
+    
 }
 
 export default Login;

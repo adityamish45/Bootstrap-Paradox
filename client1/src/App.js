@@ -2,6 +2,7 @@ import Login from "./pages/login/Login";
 import { Routes, Route } from "react-router-dom";
 import Signup from "./pages/signup/Signup";
 import Home from "./pages/home/Home";
+import NewHome from "./pages/newhome/NewHome";
 import RequireUser from "./components/RequireUser";
 import Feed from "./components/feed/Feed";
 import Profile from "./components/profile/Profile";
@@ -46,6 +47,7 @@ function App() {
                 <Toaster />
             </div>
             <Routes>
+                
                 <Route element={<RequireUser />}>
                     <Route element={<Home />}>
                         <Route path="/" element={<Feed />} />
@@ -57,9 +59,10 @@ function App() {
                     </Route>
                 </Route>
                 <Route element={<OnlyIfNotLoggedIn />}>
+                    <Route path="/newhome" element={<NewHome />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
-                </Route>
+                    </Route>
             </Routes>
         </div>
     );

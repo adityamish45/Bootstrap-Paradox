@@ -8,7 +8,7 @@ import { setLoading } from "../../redux/slices/appConfigSlice";
 import { getUserProfile } from "../../redux/slices/postsSlice";
 
 function CreatePost() {
-    const [postImg, setPostImg] = useState("");
+    const [postImg, setPostImg] = useState('');
     const [caption, setCaption] = useState('')
     const dispatch = useDispatch();
     const myProfile = useSelector(state => state.appConfigReducer.myProfile);
