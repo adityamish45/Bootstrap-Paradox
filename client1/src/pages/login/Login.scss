@@ -1,18 +1,25 @@
 
+
 .Login {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
     .heading {
         text-align: center;
     }
+
+    
+
+.Login{
+    
     background-image: linear-gradient(rgba(181, 181, 227, 0.8),rgba(76, 76, 142, 0.8)),url(/pages/backg.jpeg);
         background-position: center;
         background-size: cover;
         position: relative;
-
+}
     .login-box {
         padding: 40px;
         min-width: 400px;
@@ -52,4 +59,4 @@
     .subheading {
         margin-top: 16px;
     }
-}
+

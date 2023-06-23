@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Avatar from "../avatar/Avatar";
 import "./CreatePost.scss";
-import backgroundDummyImg from "../../assets/background.jpeg";
 import { BsCardImage } from "react-icons/bs";
 import { axiosClient } from "../../utils/axiosClient";
 import {useDispatch, useSelector} from 'react-redux';
@@ -9,7 +8,7 @@ import { setLoading } from "../../redux/slices/appConfigSlice";
 import { getUserProfile } from "../../redux/slices/postsSlice";
 
 function CreatePost() {
-    const [postImg, setPostImg] = useState("");
+    const [postImg, setPostImg] = useState('');
     const [caption, setCaption] = useState('')
     const dispatch = useDispatch();
     const myProfile = useSelector(state => state.appConfigReducer.myProfile);
@@ -45,6 +44,11 @@ function CreatePost() {
         
 
     }
+
+    const tweetNow = () => {
+        let tweetPost = `https://twitter.com/intent/tweet?text=${caption}`;
+        window.open(tweetPost);
+     }
 
     return (
         <div className="CreatePost">
@@ -83,6 +87,7 @@ function CreatePost() {
                         />
                     </div>
                     <button className="post-btn btn-primary" onClick={hanldePostSubmit}>Post</button>
+                    <button className="post-btn btn-primary" onClick={tweetNow}>Tweet</button>
                 </div>
             </div>
         </div>
