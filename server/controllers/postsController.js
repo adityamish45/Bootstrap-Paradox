@@ -8,12 +8,15 @@ const createPostController = async (req, res) => {
     try {
         const { caption, postImg } = req.body;
 
-        if(!caption || !postImg) {
-            return res.send(error(400, 'Caption and postImg are required'))
+        if(!caption && !postImg) {
+            return res.send(error(400, 'Caption and postImg required'))
         }
-        const cloudImg = await cloudinary.uploader.upload(postImg, {
-            folder: 'postImg'
-        })
+        let cloudImg = "";
+        if (postImg) {
+            cloudImg = await cloudinary.uploader.upload(postImg, {
+                folder: 'postImg'
+            })
+        }
 
         const owner = req._id;
 

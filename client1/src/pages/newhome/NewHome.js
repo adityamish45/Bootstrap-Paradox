@@ -49,22 +49,22 @@ function NewHome() {
                         Coders Hub
                     </a>
                     <nav>
-                    <div class="content">
-                        <a href="#home" className="active">
-                            Home
-                        </a>
+                        <div class="content">
+                            <a href="#home" className="active">
+                                Home
+                            </a>
                         
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
                         
-                            <div class="login"className="login hover-link" onClick={handleLoginClicked}>
+                            <div class="login" className="login hover-link" onClick={handleLoginClicked}>
                                 Login<AiOutlineLogin />
                             </div>
 
                             <div class="signup" className="signup hover-link" onClick={handleSignupClicked}>
                                 Signup
                             </div>
-                            </div>
+                        </div>
                     </nav>
                 </header>
                 <section id="home">Home</section>
