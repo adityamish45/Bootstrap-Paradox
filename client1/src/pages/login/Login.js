@@ -35,11 +35,11 @@ function Login() {
                     </a>
                     <nav>
                     <div class="content">
-                        <a href="#home" className="active">
+                        <a href="#" className="active">
                             Home
                         </a>
                         
-                        <a href="#about">About</a>
+                        <a href="##about">About</a>
                         <a href="#contact">Contact</a>
                         
                             
