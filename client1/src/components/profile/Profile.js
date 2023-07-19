@@ -73,7 +73,7 @@ function Profile() {
                         )}
                         {isMyProfile && (
                             <button
-                                className="update-profile btn-secondary"
+                                className="update-button"
                                 onClick={() => {
                                     navigate("/updateProfile");
                                 }}

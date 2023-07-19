@@ -12,6 +12,7 @@ import { useEffect, useRef } from "react";
 import LoadingBar from "react-top-loading-bar";
 import OnlyIfNotLoggedIn from "./components/OnlyIfNotLoggedIn";
 import toast, { Toaster } from "react-hot-toast";
+import Comments from "./components/commentPost/Comments";
 
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_FAILURE = "toast_failure";
@@ -42,7 +43,7 @@ function App() {
 
     return (
         <div className="App">
-            <LoadingBar color="#000" ref={loadingRef} />
+            <LoadingBar color="skyblue" ref={loadingRef} />
             <div>
                 <Toaster />
             </div>
@@ -50,6 +51,7 @@ function App() {
                 
                 <Route element={<RequireUser />}>
                     <Route element={<Home />}>
+                        <Route path="/comments" element={<Comments />}/>
                         <Route path="/" element={<Feed />} />
                         <Route path="/profile/:userId" element={<Profile />} />
                         <Route
