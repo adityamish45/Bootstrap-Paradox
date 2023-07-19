@@ -59,19 +59,12 @@ function NewHome() {
                             <a href="#home" className="active">
                                 Home
                             </a>
-<<<<<<< HEAD
 
                             <a href="#about">About</a>
                             <a href="#contact">Contact</a>
 
                             
 
-=======
-                        
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
-                        
->>>>>>> e3fe8097cd7d91c6156b5b4fcdd70ae00d8dbfd4
                             <div class="login" className="login hover-link" onClick={handleLoginClicked}>
                                 Login<AiOutlineLogin />
                             </div>
