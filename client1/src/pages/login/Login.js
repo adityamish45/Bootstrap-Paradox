@@ -40,11 +40,9 @@ function Login() {
                         </a>
                         
                         <a href="##about">About</a>
-<<<<<<< HEAD
                         <a href="#contact">Contact</a>
-=======
+
                         <a href="##contact">Contact</a>
->>>>>>> e3fe8097cd7d91c6156b5b4fcdd70ae00d8dbfd4
                         
                             
                             </div>

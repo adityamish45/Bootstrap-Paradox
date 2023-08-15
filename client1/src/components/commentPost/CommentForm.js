@@ -23,7 +23,7 @@ const CommentForm = ({ postId,owner, addComment }) => {
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
-          {content != '' && <button type="submit" className="add-button" style={{ marginLeft: 540 + 'px' }}>
+          {content != '' && <button type="submit" className="add-button" style={{ marginLeft: 440 + 'px' }}>
             Post
           </button>}
             </form>
